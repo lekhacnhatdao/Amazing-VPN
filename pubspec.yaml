@@ -1,0 +1,109 @@
+name: openvpn
+description: Open VPN
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #UI
+  
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.5
+  flutter_advanced_drawer: ^1.3.5
+  flutter_sticky_header: ^0.6.5
+  animated_segmented_tab_control: ^1.1.0
+  im_animations: ^0.1.2
+  flutter_easyloading: ^3.0.5
+  grouped_list: ^5.1.2
+  #State Management
+  flutter_bloc: ^8.1.3
+  #DI
+  get_it: ^7.6.0
+  injectable: ^2.1.2
+  #Networking
+  http: ^1.0.0
+  pretty_http_logger: ^1.0.1
+  cached_network_image: ^3.2.3
+  #Local
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.0
+  path_provider: ^2.0.15
+  #OVPN
+  openvpn_flutter: ^1.2.2
+  #Billing
+  in_app_purchase: ^3.1.5
+  in_app_purchase_storekit: ^0.3.6+3
+  in_app_purchase_android: ^0.3.0+10
+  #Common
+  auto_route: ^7.7.0
+  dartz: ^0.10.1
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  collection: ^1.17.1
+  url_launcher: ^6.1.12
+  share_plus: ^7.0.2
+  intl: ^0.18.1
+  flutter_dash: ^1.0.0
+  gradient_icon: ^2.0.0
+  gradient_borders: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  auto_route_generator:
+  flutter_gen_runner:
+  hive_generator:
+  flutter_lints: ^2.0.0
+  injectable_generator: ^2.1.2
+  freezed: ^2.4.1
+  json_serializable: ^6.7.1
+  change_app_package_name: ^1.1.0
+
+
+  
+
+
+flutter_gen:
+  output: lib/resources/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  integrations:
+    flutter_svg: true
+
+#  colors:
+#    enabled: true
+#    outputs:
+#      class_name: AppColors
+#    inputs:
+#      - assets/color/colors.xml
+
+  
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
+    - assets/opvn/
+    - assets/flags/
+    
+
+  fonts:
+    - family: campton
+      fonts:
+        - asset: assets/fonts/campton_regular.otf
+    - family: camptonMedium
+      fonts:
+        - asset: assets/fonts/campton_medium.otf
+    - family: camptonBold
+      fonts:
+        - asset: assets/fonts/campton_bold.otf
+    - family: icomoon
+      fonts:
+        - asset: "assets/dataicon/icomoon.ttf"

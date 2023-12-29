@@ -1,0 +1,460 @@
+{
+  "success": true,
+  "configs": {
+    "app": "Amazing VPN",
+    "version": 1,
+    "review": true,
+    "test": true,
+    "lockApp": false,
+    "lockFree": false,
+    "lockChat": false
+  },
+  "servers": [
+    {
+      "ip": "51.75.187.111",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "Lombardy",
+      "city": "Milan",
+      "timezone": "Europe\/Rome",
+      "lat": "45.4722",
+      "lon": "9.1922",
+      "zip": "20159",
+      "ovpn": "assets/opvn/hk_client_165.154.225.37.ovpn",
+      "flag": "assets/flags/IT.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "165.154.225.33",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "region": "Central and Western District",
+      "city": "Hong Kong",
+      "timezone": "Asia\/Hong_Kong",
+      "lat": "22.2842",
+      "lon": "114.1759",
+      "zip": "96521",
+      "ovpn": "assets/opvn/hk_client_165.154.225.37.ovpn",
+      "flag": "assets/flags/HK.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "165.154.242.183",
+      "country": "Philippines",
+      "countryCode": "PH",
+      "region": "Metro Manila",
+      "city": "Manila",
+      "timezone": "Asia\/Manila",
+      "lat": "14.6019",
+      "lon": "120.9896",
+      "zip": "0900",
+      "ovpn": "assets/opvn/ph_client_165.154.210.10.ovpn",
+      "flag": "assets/flags/PH.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "139.99.138.208",
+      "country": "Australia",
+      "countryCode": "AU",
+      "region": "New South Wales",
+      "city": "Sydney",
+      "timezone": "Australia\/Sydney",
+      "lat": "-33.8715",
+      "lon": "151.2006",
+      "zip": "2000",
+      "ovpn": "assets/opvn/au_client_51.161.157.87.ovpn",
+      "flag": "assets/flags/AU.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "51.210.86.101",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Hauts-de-France",
+      "city": "Roubaix",
+      "timezone": "Europe\/Paris",
+      "lat": "50.6917",
+      "lon": "3.20157",
+      "zip": "59100",
+      "ovpn": "assets/opvn/fr_client_51.75.187.68.ovpn",
+      "flag": "assets/flags/FR.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "103.195.238.219",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "region": "Ho Chi Minh",
+      "city": "Quan Binh Thanh",
+      "timezone": "Asia\/Ho_Chi_Minh",
+      "lat": "10.8105",
+      "lon": "106.707",
+      "zip": "",
+      "ovpn": "assets/opvn/vn_client_103.195.238.6.ovpn",
+      "flag": "assets/flags/VN.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": false
+      }
+    },
+    {
+      "ip": "165.154.227.209",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "region": "Taipei City",
+      "city": "Taipei",
+      "timezone": "Asia\/Taipei",
+      "lat": "25.0504",
+      "lon": "121.5324",
+      "zip": "",
+      "ovpn": "assets/opvn/tw_client_165.154.226.158.ovpn",
+      "flag": "assets/flags/TW.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "147.189.131.15",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "region": "North Holland",
+      "city": "Amsterdam",
+      "timezone": "Europe\/Amsterdam",
+      "lat": "52.3109",
+      "lon": "4.9453",
+      "zip": "1101",
+      "ovpn": "assets/opvn/fr_client_141.94.149.105.ovpn",
+      "flag": "assets/flags/NL.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "103.68.109.108",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "region": "North West",
+      "city": "Singapore",
+      "timezone": "Asia\/Singapore",
+      "lat": "1.35208",
+      "lon": "103.82",
+      "zip": "858877",
+      "ovpn": "assets/opvn/sg_client_139.99.35.106.ovpn",
+      "flag": "assets/flags/SG.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": false
+      }
+    },
+    {
+      "ip": "165.154.240.192",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "region": "Seoul",
+      "city": "Seoul",
+      "timezone": "Asia\/Seoul",
+      "lat": "0",
+      "lon": "0",
+      "zip": "",
+      "ovpn": "assets/opvn/kr_client_165.154.240.116.ovpn",
+      "flag": "assets/flags/KR.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "103.174.67.173",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "region": "East Java",
+      "city": "Embongkaliasin",
+      "timezone": "Asia\/Jakarta",
+      "lat": "-7.27319",
+      "lon": "112.743",
+      "zip": "",
+      "ovpn": "assets/opvn/id_client_103.174.67.169.ovpn",
+      "flag": "assets/flags/ID.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "165.154.232.97",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "region": "Bangkok",
+      "city": "Bangkok",
+      "timezone": "Asia\/Bangkok",
+      "lat": "13.7512",
+      "lon": "100.5172",
+      "zip": "10200",
+      "ovpn": "assets/opvn/th_client_165.154.232.194.ovpn",
+      "flag": "assets/flags/TH.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "216.218.189.37",
+      "country": "United States",
+      "countryCode": "US",
+      "region": "California",
+      "city": "Napa",
+      "timezone": "America\/Los_Angeles",
+      "lat": "38.4549",
+      "lon": "-122.2564",
+      "zip": "94558",
+      "ovpn": "assets/opvn/us_client_50.114.12.12.ovpn",
+      "flag": "assets/flags/US.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "165.154.234.46",
+      "country": "Nigeria",
+      "countryCode": "NG",
+      "region": "Lagos",
+      "city": "Lagos",
+      "timezone": "Africa\/Lagos",
+      "lat": "6.52438",
+      "lon": "3.37921",
+      "zip": "",
+      "ovpn": "assets/opvn/ng_client_165.154.234.41.ovpn",
+      "flag": "assets/flags/NG.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "198.244.174.163",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "Madrid",
+      "city": "Madrid",
+      "timezone": "Europe\/Madrid",
+      "lat": "40.4186",
+      "lon": "-3.7323",
+      "zip": "28008",
+      "ovpn": "assets/opvn/fr_client_54.37.213.180",
+      "flag": "assets/flags/ES.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": false
+      }
+    },
+    {
+      "ip": "141.94.149.109",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "region": "Lisbon",
+      "city": "Lisbon",
+      "timezone": "Europe\/Lisbon",
+      "lat": "38.731",
+      "lon": "-9.1373",
+      "zip": "1150-214",
+      "ovpn": "assets/opvn/fr_client_54.37.213.180.ovpn",
+      "flag": "assets/flags/PT.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": false
+      }
+    },
+    {
+      "ip": "2.58.175.81",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "region": "England",
+      "city": "Erith",
+      "timezone": "Europe\/London",
+      "lat": "51.4863",
+      "lon": "0.1822",
+      "zip": "DA8",
+      "ovpn": "assets/opvn/uk_client_198.244.187.54.ovpn",
+      "flag": "assets/flags/UK.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "158.69.34.183",
+      "country": "Canada",
+      "countryCode": "CA",
+      "region": "Quebec",
+      "city": "Montreal",
+      "timezone": "America\/Toronto",
+      "lat": "45.5075",
+      "lon": "-73.5887",
+      "zip": "H3H",
+      "ovpn": "assets/opvn/ca_client_144.217.129.88.ovpn",
+      "flag": "assets/flags/CA.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "165.154.241.43",
+      "country": "Japan",
+      "countryCode": "JP",
+      "region": "Tokyo",
+      "city": "Motoyoyogich\u014d",
+      "timezone": "Asia\/Tokyo",
+      "lat": "0",
+      "lon": "0",
+      "zip": "",
+      "ovpn": "assets/opvn/jp_client_165.154.241.94.ovpn",
+      "flag": "assets/flags/JP.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": true
+      }
+    },
+    {
+      "ip": "188.40.199.170",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Saxony",
+      "city": "Falkenstein",
+      "timezone": "Europe\/Berlin",
+      "lat": "50.475",
+      "lon": "12.365",
+      "zip": "08223",
+      "ovpn": "assets/opvn/us_client_50.114.12.12",
+      "flag": "assets/flags/DE.png",
+      "vpn": {
+        "table": [
+          "1",
+          "2",
+          "3"
+        ],
+        "free": false
+      }
+    }
+  ],
+  "services": [
+    {
+      "name": "AdMob",
+      "id": "",
+      "enabled": false,
+      "test": true,
+      "banner": [
+        {
+          "id": "",
+          "placement": "Home",
+          "refresh": 90,
+          "enabled": false,
+          "config": []
+        }
+      ],
+      "interstitial": [
+        {
+          "id": "",
+          "placement": "Connect, Disconnected",
+          "refresh": 90,
+          "enabled": false,
+          "config": []
+        }
+      ]
+    }
+  ]
+}
