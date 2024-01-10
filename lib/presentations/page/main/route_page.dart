@@ -53,7 +53,7 @@ class AgreePrivacyPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         gradient: LinearGradient(colors: AppColors.listgradient, begin: Alignment.centerLeft, end: Alignment.centerRight)
                       ),
-                        child: Align(child: const Text("Agree and continue", style: TextStyle(color: AppColors.primary),)) ,
+                        child: Align(child: const Text("Accept & continue", style: TextStyle(color: AppColors.primary),)) ,
                      
                      ),
                   ),
