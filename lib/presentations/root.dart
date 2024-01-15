@@ -21,6 +21,7 @@ class RootPage extends StatelessWidget {
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarIconBrightness: Brightness.dark,
             statusBarColor: Colors.transparent,
+            
           ),
           iconTheme: IconThemeData(color: AppColors.textPrimary),
           color: Colors.transparent,
