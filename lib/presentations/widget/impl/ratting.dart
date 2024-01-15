@@ -37,7 +37,7 @@ class _RatingDialogState extends State<RatingDialog> {
           children: [
             AppBar(leading: TextButton(onPressed: (){
               Navigator.pop(context);
-            },child: Icon(Icons.clear_rounded)),
+            },child: Icon(Icons.clear_rounded, )),
             
             ),
             ClipRRect(

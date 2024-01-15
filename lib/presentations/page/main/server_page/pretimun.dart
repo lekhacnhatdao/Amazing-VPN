@@ -18,40 +18,47 @@ class PretimunServer extends StatefulWidget {
 }
 
 class _PretimunServerState extends State<PretimunServer> {
+ 
+  List<VpnServerModel>  ?hello ;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(
       builder: (context, state) {
+        for(int i = 0; i< state.servers.length; i++){
+          if (state.servers[i].vip) {
+            hello?.add(state.servers[i]);
+          }
+          
+        }
         return Column(
           children: [
-            Expanded(child: ListView.builder( 
-              itemCount: 2 ,itemBuilder:(context, index) {
-           
-               
-         
-            if(state.servers[index].vip){
-            final server1 = state.servers[index] ;
-            final isSelected = state.currentServer?.id == server1.id;         
-               return buildPretimun(server1 ,isSelected, state.isVip );
-                 } 
-          
-             
-              ;} ,))
+            Expanded(
+                child: ListView.builder(
+              itemCount: state.servers.length,
+              itemBuilder: (context, index) {
+             final  server1 =  hello?.elementAt(index);
+                final isSelected = state.currentServer?.id == server1;
+                return buildPretimun(
+                    server1 ?? state.servers[5], isSelected, state.isVip);
+
+                ;
+              },
+            ))
           ],
         );
       },
     );
   }
 
-  Widget buildPretimun(VpnServerModel server, bool isSelected, bool isVip ) {
+  Widget buildPretimun(VpnServerModel server, bool isSelected, bool isVip) {
     bool flag = false;
-
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5),
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: BoxDecoration(
-          color: const Color(0xff1A1919).withOpacity(0.25), borderRadius: BorderRadius.circular(20)),
+          color: const Color(0xff1A1919).withOpacity(0.25),
+          borderRadius: BorderRadius.circular(20)),
       child: InkWell(
         onTap: isSelected
             ? null
@@ -72,8 +79,7 @@ class _PretimunServerState extends State<PretimunServer> {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                 ),
-                child: Image.asset(
-                      server.flag),
+                child: Image.asset(server.flag),
               ),
               const SizedBox(
                 width: 10,
@@ -99,25 +105,29 @@ class _PretimunServerState extends State<PretimunServer> {
                   },
                 ),
               const Spacer(),
-                Assets.images.crown.image(),
-                const SizedBox(width: 10,),
-               server.vip && !isVip ? const SizedBox() : isSelected
-                  ? const Icon(
-                      Icons.check_circle,
-                      color: Color.fromARGB(255, 25, 110, 238),
-                    )
-                  : const Icon(
-                      Icons.radio_button_unchecked,
-                      color: Color.fromARGB(255, 25, 110, 238),
-                    )
+              Assets.images.crown.image(),
+              const SizedBox(
+                width: 10,
+              ),
+              server.vip && !isVip
+                  ? const SizedBox()
+                  : isSelected
+                      ? const Icon(
+                          Icons.check_circle,
+                          color: Color.fromARGB(255, 25, 110, 238),
+                        )
+                      : const Icon(
+                          Icons.radio_button_unchecked,
+                          color: Color.fromARGB(255, 25, 110, 238),
+                        )
             ],
           ),
         ),
       ),
     );
-    
   }
-     void _handleItemTapped(VpnServerModel server, bool isVip) {
+
+  void _handleItemTapped(VpnServerModel server, bool isVip) {
     if (server.vip && !isVip) {
       AutoRouter.of(context).push(const PremiumRoute());
     } else {
