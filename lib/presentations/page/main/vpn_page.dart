@@ -44,7 +44,7 @@ class _VpnPageState extends State<VpnPage> {
                   // Navigator.pop(context);
                   Navigator.of(context).popUntil((route) => route.isFirst);
                   _dialogShown = false;
-                }),
+                 }),
           ],
         );
       },
