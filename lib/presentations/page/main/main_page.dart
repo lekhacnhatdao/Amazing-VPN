@@ -19,6 +19,7 @@ import 'package:openvpn/resources/colors.dart';
 import 'package:openvpn/resources/icondata.dart';
 
 import 'package:openvpn/utils/config.dart';
+import 'package:upgrader/upgrader.dart';
 
 @RoutePage()
 class MainPage extends StatefulWidget {
@@ -66,98 +67,100 @@ class _MainPageState extends State<MainPage>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SafeArea(
-        bottom: false,
-        child: Scaffold(
-            backgroundColor: Colors.black.withOpacity(0.05),
-            appBar: AppBar(
-              backgroundColor: Colors.black,
-              leading: const Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image(
-                    image: AssetImage('assets/images/Frame.png'),
-                    height: 30,
-                  ),
-                ],
-              ),
-              title: const AppTitleText(
-                text: Config.appName,
-                color: Colors.white,
-              ),
-              actions: [
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  child: TextButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: AppColors.purple,
-                      ),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) {
-                            return PremiumPage();
-                          }));
-                        },
-                        child: Row(
-                          children: [
-                            Image.asset('assets/images/crown.png'),
-                            const Text(
-                              'Go VIP',
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
+    return UpgradeAlert(
+      child: Container(
+        child: SafeArea(
+          bottom: false,
+          child: Scaffold(
+              backgroundColor: Colors.black.withOpacity(0.05),
+              appBar: AppBar(
+                backgroundColor: Colors.black,
+                leading: const Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image(
+                      image: AssetImage('assets/images/Frame.png'),
+                      height: 30,
+                    ),
+                  ],
+                ),
+                title: const AppTitleText(
+                  text: Config.appName,
+                  color: Colors.white,
+                ),
+                actions: [
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    child: TextButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: AppColors.purple,
                         ),
-                      )),
-                )
-                // BlocBuilder<AppCubit, AppState>(
-                //   builder: (context, state) {
-                //     return Container(
-                //       decoration: const BoxDecoration(
-                //         boxShadow: <BoxShadow>[
-                //           BoxShadow(
-                //             color: Colors.white12,
-                //             blurRadius: 10,
-                //           ),
-                //         ],
-                //         borderRadius: BorderRadius.all(Radius.circular(100)),
-                //       ),
-                //       padding: const EdgeInsets.symmetric(horizontal: 16),
-                //       child: CachedNetworkImage(
-                //         imageUrl: state.currentServer?.flag ?? 'assets/images/Frame.png',
-                //         height: 32,
-                //       ),
-                //     );
-                //   },
-                // )
-              ],
-            ),
-            body: Custombackground(
-              widget: Column(
-                children: [
-                  Expanded(
-                    child: TabBarView(controller: controller, children: const [
-                      VpnPage(),
-                      HistoryPage(),
-                      SettingPage(),
-                    ]),
-                  ),
-                  CustomBottomBar(
-                    controller: controller,
-                    listIcon: [
-                      Appicon.flashcircle,
-                      Icons.history_outlined,
-                      Icons.settings,
-                    ],
-                    onSelect: (index) => controller.animateTo(index),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (_) {
+                              return PremiumPage();
+                            }));
+                          },
+                          child: Row(
+                            children: [
+                              Image.asset('assets/images/crown.png'),
+                              const Text(
+                                'Go VIP',
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
+                          ),
+                        )),
                   )
+                  // BlocBuilder<AppCubit, AppState>(
+                  //   builder: (context, state) {
+                  //     return Container(
+                  //       decoration: const BoxDecoration(
+                  //         boxShadow: <BoxShadow>[
+                  //           BoxShadow(
+                  //             color: Colors.white12,
+                  //             blurRadius: 10,
+                  //           ),
+                  //         ],
+                  //         borderRadius: BorderRadius.all(Radius.circular(100)),
+                  //       ),
+                  //       padding: const EdgeInsets.symmetric(horizontal: 16),
+                  //       child: CachedNetworkImage(
+                  //         imageUrl: state.currentServer?.flag ?? 'assets/images/Frame.png',
+                  //         height: 32,
+                  //       ),
+                  //     );
+                  //   },
+                  // )
                 ],
               ),
-            )),
+              body: Custombackground(
+                widget: Column(
+                  children: [
+                    Expanded(
+                      child: TabBarView(controller: controller, children: const [
+                        VpnPage(),
+                        HistoryPage(),
+                        SettingPage(),
+                      ]),
+                    ),
+                    CustomBottomBar(
+                      controller: controller,
+                      listIcon: [
+                        Appicon.flashcircle,
+                        Icons.history_outlined,
+                        Icons.settings,
+                      ],
+                      onSelect: (index) => controller.animateTo(index),
+                    )
+                  ],
+                ),
+              )),
+        ),
       ),
     );
   }
