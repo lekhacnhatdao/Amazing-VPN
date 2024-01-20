@@ -64,13 +64,17 @@ class AppCubit extends Cubit<AppState> {
     emit(state.copyWith(currentServer: server));
   }
 
-  Future<void> toggle() async {
+Future<void> toggle() async {
     final currentVpnServer = state.currentServer;
     if (currentVpnServer == null) {
       return;
     }
 
-    if (state.vpnStage == VPNStage.connected) {
+
+    if (state.vpnStage != VPNStage.disconnected && state.vpnStage != VPNStage.connected)  {
+      _doDisconnect();
+    }
+    if (state.vpnStage == VPNStage.connected)  {
       _doDisconnect();
     } else if (state.vpnStage == VPNStage.disconnected) {
       final config = await _repository.getOvpnConfig(currentVpnServer.id);
